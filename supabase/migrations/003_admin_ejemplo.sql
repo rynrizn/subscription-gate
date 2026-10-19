@@ -1,0 +1,28 @@
+-- ==============================================================================
+-- 003_admin_ejemplo.sql
+-- subscription-gate: Asignación del primer usuario Administrador
+-- ==============================================================================
+--
+-- INSTRUCCIONES:
+--
+-- 1) Crea tu usuario en la consola web de Supabase:
+--    Panel de Supabase -> Authentication -> Users -> "Add user" -> "Create user"
+--    Introduce tu correo de administrador y una contraseña segura.
+--
+-- 2) En la tabla de usuarios de Authentication, localiza la columna "User UID"
+--    y copia el UUID generado (ejemplo: e9b87f90-1234-4567-890a-bcdef0123456).
+--
+-- 3) Descomenta la línea siguiente, reemplaza el UUID con tu UID real y ejecuta
+--    este script en el SQL Editor de Supabase:
+--
+-- INSERT INTO public.admins (user_id)
+-- VALUES ('00000000-0000-0000-0000-000000000000');
+--
+-- 4) Comprueba que tu usuario ahora tiene permisos de administrador:
+--
+-- SELECT u.email, a.user_id, l.fecha_fin, l.bloqueada
+-- FROM public.admins a
+-- JOIN auth.users u ON u.id = a.user_id
+-- LEFT JOIN public.licencias l ON l.usuario_id = a.user_id;
+--
+-- ==============================================================================
