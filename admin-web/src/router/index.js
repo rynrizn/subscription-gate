@@ -1,9 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { supabase, checkIsAdmin } from '../lib/supabase'
+import Landing from '../pages/Landing.vue'
 import Login from '../pages/Login.vue'
 import Usuarios from '../pages/Usuarios.vue'
 
 const routes = [
+  {
+    path: '/',
+    name: 'Landing',
+    component: Landing,
+  },
   {
     path: '/login',
     name: 'Login',
@@ -17,12 +23,8 @@ const routes = [
     meta: { requiresAdmin: true },
   },
   {
-    path: '/',
-    redirect: '/usuarios',
-  },
-  {
     path: '/:pathMatch(.*)*',
-    redirect: '/usuarios',
+    redirect: '/',
   },
 ]
 

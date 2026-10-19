@@ -84,8 +84,9 @@ Cloudflare Pages ofrece ancho de banda ilimitado y despliegues automáticos desd
 
 ## 3. Comprobación Post-Despliegue
 
-1. Abre la URL pública generada por tu proveedor (ej. `https://mi-panel-licencias.pages.dev`).
-2. Deberías ver la pantalla de **Login** con el tema oscuro minimalista.
-3. Ingresa con las credenciales del usuario administrador que configuraste en Supabase.
-4. Comprueba que eres redirigido a `/usuarios` y puedes visualizar la tabla de licencias y estadísticas.
-5. Intenta recargar la página en la ruta `/usuarios` para verificar que la regla de reescritura SPA funciona sin devolver error 404.
+1. Abre la URL pública generada por tu proveedor (ej. `https://mi-software.pages.dev`).
+2. Deberías ver la **Landing Page promocional** en la raíz (`/`) con la presentación de la app, características, pasos de uso y preguntas frecuentes.
+3. Haz clic en el botón **"Acceso Admin"** en la esquina superior derecha (o navega a `/login`) para acceder al inicio de sesión de administración.
+4. Ingresa con las credenciales del usuario administrador que configuraste en Supabase.
+5. Comprueba que eres redirigido a `/usuarios` y puedes visualizar la tabla de licencias y estadísticas.
+6. Intenta recargar la página directamente en la ruta `/usuarios` para verificar que la regla de reescritura SPA funciona sin devolver error 404.

@@ -174,6 +174,7 @@ subscription-gate/
 │   │   ├── lib/supabase.js       # Cliente Supabase (solo anon key)
 │   │   ├── router/index.js       # Rutas y guardias de seguridad
 │   │   └── pages/
+│   │       ├── Landing.vue       # Landing page pública promocional
 │   │       ├── Login.vue         # Login seguro con verificación admin
 │   │       └── Usuarios.vue      # Métricas, tabla/tarjetas y acciones
 │   └── .env.example
